@@ -12,8 +12,7 @@
     "test": "concurrently \"yarn test:endpoints\" \"yarn test:validation\" \"yarn test:businessLogic\""
   },
   "dependencies": {
-    "@blockfrost/blockfrost-js": "^5.4.0",
-    "@emurgo/cardano-serialization-lib-nodejs": "^11.5.0",
+    "@meshsdk/core": "^1.6.12",
     "axios": "^1.5.0",
     "class-validator": "^0.14.0",
     "cors": "^2.8.5",
@@ -33,6 +32,6 @@
     "supertest": "^6.3.3",
     "test-node": "^0.0.2",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.5.4"
   }
 }
