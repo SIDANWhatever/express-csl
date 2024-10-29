@@ -315,6 +315,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bufbuild/protobuf@^1.10.0":
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.10.0.tgz#1a67ac889c2d464a3492b3e54c38f80517963b16"
+  integrity sha512-QDdVFLoN93Zjg36NoQPZfsVH9tZew7wKDKyV5qRdj8ntT4wQCOradQjRaTdwMhWUYsgKsvCINKKm87FdEk96Ag==
+
 "@cardano-ogmios/client@6.3.0":
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/@cardano-ogmios/client/-/client-6.3.0.tgz#3d48acd5f939a67a843d9d0756bb71ef6fd3b604"
@@ -357,7 +362,7 @@
   resolved "https://registry.yarnpkg.com/@cardano-ogmios/schema/-/schema-6.5.0.tgz#e831f75387bbc6ea69d755e12d1da9b5bc7d4d81"
   integrity sha512-tE2LvqfZ1SNBm4C6H/VITtFQ/zOJ8diGuHFPe30Pvg4hQzmD/1ekGCb73MJkcKy2WGpIRjnk/uwAzczc7Y320A==
 
-"@cardano-sdk/core@^0.35.4", "@cardano-sdk/core@~0.35.4":
+"@cardano-sdk/core@0.35.4", "@cardano-sdk/core@~0.35.4":
   version "0.35.4"
   resolved "https://registry.yarnpkg.com/@cardano-sdk/core/-/core-0.35.4.tgz#f5f16fb5f14558448c96fe0d06fe68775be18659"
   integrity sha512-FgNHOs9/kp8mqNagWkghn+Xfj0Wfr7HhBhxW92RZL2kKop7zyWlwhhXIZMdZvbHzqnAWhdIg2IYNb8j6IMI3yA==
@@ -413,7 +418,22 @@
     ts-log "^2.2.4"
     web-encoding "^1.1.5"
 
-"@cardano-sdk/crypto@^0.1.28", "@cardano-sdk/crypto@~0.1.28", "@cardano-sdk/crypto@~0.1.29", "@cardano-sdk/crypto@~0.1.30":
+"@cardano-sdk/crypto@0.1.28":
+  version "0.1.28"
+  resolved "https://registry.yarnpkg.com/@cardano-sdk/crypto/-/crypto-0.1.28.tgz#fa0eba12c3cc9f48665887f8ae682c2b105fef71"
+  integrity sha512-Uw7+DFAE/nNBfxLU1dZB/p2zatsM2RQZ2q3t/MfQ6mAHQhd1aRy+MKkdWJGsHMu7VNzi4NMGIMq3LJowFXbGdg==
+  dependencies:
+    "@cardano-sdk/util" "~0.15.4"
+    blake2b "^2.1.4"
+    i "^0.3.7"
+    libsodium-wrappers-sumo "^0.7.5"
+    lodash "^4.17.21"
+    npm "^9.3.0"
+    pbkdf2 "^3.1.2"
+    ts-custom-error "^3.2.0"
+    ts-log "^2.2.4"
+
+"@cardano-sdk/crypto@~0.1.28", "@cardano-sdk/crypto@~0.1.29", "@cardano-sdk/crypto@~0.1.30":
   version "0.1.30"
   resolved "https://registry.yarnpkg.com/@cardano-sdk/crypto/-/crypto-0.1.30.tgz#d4c8141869713baebbad766b3866d9c0830db66d"
   integrity sha512-xUJSF+OWL8z1t/cnjRlYVMIC2zlk3cYazn6/+bEyvXHv9+XyPbgZK44iOiJryJcgsaG7ibzJXaOw/DWeS1dwSg==
@@ -520,7 +540,19 @@
     rxjs "^7.4.0"
     ts-log "^2.2.4"
 
-"@cardano-sdk/util@^0.15.4", "@cardano-sdk/util@~0.15.4", "@cardano-sdk/util@~0.15.5":
+"@cardano-sdk/util@0.15.4":
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/@cardano-sdk/util/-/util-0.15.4.tgz#3ac674aff2f2689283c4c9ed26d3c47ddd914ea7"
+  integrity sha512-lUPCCPADaORY0O5fFKYzGSQiQtCK6pkF7XKxDIwpWts9MvW6RKm8QtUiY0J0FpzcbTTIvcMWOfzkOivtTm3LvA==
+  dependencies:
+    bech32 "^2.0.0"
+    lodash "^4.17.21"
+    serialize-error "^8"
+    ts-custom-error "^3.2.0"
+    ts-log "^2.2.4"
+    type-fest "^2.19.0"
+
+"@cardano-sdk/util@~0.15.4", "@cardano-sdk/util@~0.15.5":
   version "0.15.5"
   resolved "https://registry.yarnpkg.com/@cardano-sdk/util/-/util-0.15.5.tgz#e181f885fd1b2d6a26e9b6ac8db98a9a3b940094"
   integrity sha512-TM80z29l6FMa878HBSHFETrRLA/jfh4X+CEF3RPw6Bf0a+BpXL9ve2qKjWMv5Gf4fvRIq1r+pFVKQGWKR9SzIA==
@@ -544,10 +576,32 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
+"@connectrpc/connect-node@1.4":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@connectrpc/connect-node/-/connect-node-1.4.0.tgz#9edd22fd7bc812b4692f228d2ff6bbd549cbb032"
+  integrity sha512-0ANnrr6SvsjevsWEgdzHy7BaHkluZyS6s4xNoVt7RBHFR5V/kT9lPokoIbYUOU9JHzdRgTaS3x5595mwUsu15g==
+  dependencies:
+    undici "^5.28.3"
+
+"@connectrpc/connect-web@1.4":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@connectrpc/connect-web/-/connect-web-1.4.0.tgz#4f46a6728251244e9fc837bcdbf0911b0b0def15"
+  integrity sha512-13aO4psFbbm7rdOFGV0De2Za64DY/acMspgloDlcOKzLPPs0yZkhp1OOzAQeiAIr7BM/VOHIA3p8mF0inxCYTA==
+
+"@connectrpc/connect@1.4":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@connectrpc/connect/-/connect-1.4.0.tgz#4a987d6c9fc78ea61bce7d19e27b2de4d14c658f"
+  integrity sha512-vZeOkKaAjyV4+RH3+rJZIfDFJAfr+7fyYr6sLDKbYX3uuTVszhFe9/YKf5DNqrDb5cKdKVlYkGn6DTDqMitAnA==
+
 "@emurgo/cardano-message-signing-nodejs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@emurgo/cardano-message-signing-nodejs/-/cardano-message-signing-nodejs-1.0.1.tgz#b2fa1f7541055a6c4b8e805492b1a9362bea5835"
   integrity sha512-PoKh1tQnJX18f8iEr8Jk1KXxKCn9eqaSslMI1pyOJvYRJhQVDLCh0+9YReufjp0oFJIY1ShcrR+4/WnECVZUKQ==
+
+"@fastify/busboy@^2.0.0":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-2.1.1.tgz#b9da6a878a371829a0502c9b6c1c143ef6663f4d"
+  integrity sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==
 
 "@foxglove/crc@^0.0.3":
   version "0.0.3"
@@ -892,94 +946,96 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@meshsdk/common@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/common/-/common-1.6.12.tgz#7caf6205552fe657bd809b1c795015ba3c23a934"
-  integrity sha512-+WOfYcCYH+6Fl7Hyv9hAOMl1yDDtNufKJ0xsy3YkHCmLrtIISWgeQ5WvJQoKKDKwmkrXcy1AfmGIH8C/K3/CpA==
+"@meshsdk/common@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/common/-/common-1.7.10.tgz#93ec0b36e5ddf0ee8999f4792c1da702f931aee6"
+  integrity sha512-V4D0BvgjnQGvR4upNMzVRpW9cag7E/bU6lXlngtN5Urp19WMYRz/Z+cCjhzcAjHdF6tWsefDMRpvsFPIi/RrzA==
   dependencies:
     bech32 "^2.0.0"
     bip39 "3.1.0"
     blake2b "^2.1.4"
 
-"@meshsdk/core-csl@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/core-csl/-/core-csl-1.6.12.tgz#4e8cd4143643c93b0a286364c5714d3be433f47b"
-  integrity sha512-ZoOWcvN/ytjzHFMiGKgrKxg5Xg3aTmvug3CGvvbLlt2zXxT9uxuOlbojNTcEk+t0ESeQdlKWZbBIuAhZpykzyw==
+"@meshsdk/core-csl@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/core-csl/-/core-csl-1.7.10.tgz#bfeeea88bc06646e8131abcc94619e6dc79cf019"
+  integrity sha512-3n2GExMDt6Z8xypp0YznQAbuM8lF8Um/0vIolWnTos9b6HmfRqNN+oGgwvVIygRvgD9siRD1QD4gMiRY+AOwPw==
   dependencies:
-    "@meshsdk/common" "*"
-    "@sidan-lab/sidan-csl-rs-browser" "0.7.5"
-    "@sidan-lab/sidan-csl-rs-nodejs" "0.7.5"
+    "@meshsdk/common" "1.7.10"
+    "@sidan-lab/sidan-csl-rs-browser" "0.9.4"
+    "@sidan-lab/sidan-csl-rs-nodejs" "0.9.4"
     json-bigint "^1.0.0"
 
-"@meshsdk/core-cst@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/core-cst/-/core-cst-1.6.12.tgz#1998d9c75739df87bac4fd81ee9bebe433ab6fc7"
-  integrity sha512-/iAiSDHSvhzk8UZ7DboIXDAMxjqDZMlOYdzjYElB+GL+/nkQKB+baCtio6X0VYK9xLHTs/4IqMKXwTqrzZFajw==
+"@meshsdk/core-cst@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/core-cst/-/core-cst-1.7.10.tgz#a68fc866ccf9dc550a8214eff8593208a4bfea99"
+  integrity sha512-4utF1ScNb321TBWULAu0Z3zfnuskf4VcBE0Pu9SeJ1waj0Rxq/PUZb2On5rQSZjttwqYLT5lSQ71qY+6lUMy4A==
   dependencies:
-    "@cardano-sdk/core" "^0.35.4"
-    "@cardano-sdk/crypto" "^0.1.28"
-    "@cardano-sdk/util" "^0.15.4"
+    "@cardano-sdk/core" "0.35.4"
+    "@cardano-sdk/crypto" "0.1.28"
+    "@cardano-sdk/util" "0.15.4"
     "@harmoniclabs/cbor" "1.3.0"
     "@harmoniclabs/plutus-data" "1.2.4"
     "@harmoniclabs/uplc" "1.2.4"
-    "@meshsdk/common" "*"
+    "@meshsdk/common" "1.7.10"
     "@stricahq/bip32ed25519" "^1.1.0"
     "@stricahq/cbors" "^1.0.0"
     pbkdf2 "^3.1.2"
 
-"@meshsdk/core@^1.6.12":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/core/-/core-1.6.12.tgz#6b83ea539709c89ba4b5cd25a712453e57e388b1"
-  integrity sha512-AH+lLMOQaYhFKtXbKeTlTiHNQ07NwLxn70dnUMRUePCImxsctfMyPsLzi2ysWH6edGJ+Bm635FU9+UYHQwS+lQ==
+"@meshsdk/core@^1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/core/-/core-1.7.10.tgz#37bfe307f447b09fe8a4bb4c91437b3815301a69"
+  integrity sha512-6thoGMtd7Ne60KhmuCH254BbckqDVNbtg1tbVWlKzeUEJ4fuAC2h8KwzVQfyDVPdJx/g2YP5mXMEpa73nN/Big==
   dependencies:
-    "@meshsdk/common" "*"
-    "@meshsdk/core-csl" "*"
-    "@meshsdk/core-cst" "*"
-    "@meshsdk/provider" "*"
-    "@meshsdk/react" "*"
-    "@meshsdk/transaction" "*"
-    "@meshsdk/wallet" "*"
+    "@meshsdk/common" "1.7.10"
+    "@meshsdk/core-csl" "1.7.10"
+    "@meshsdk/core-cst" "1.7.10"
+    "@meshsdk/provider" "1.7.10"
+    "@meshsdk/react" "1.7.10"
+    "@meshsdk/transaction" "1.7.10"
+    "@meshsdk/wallet" "1.7.10"
 
-"@meshsdk/provider@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/provider/-/provider-1.6.12.tgz#d1d77e2424ce10c400c64e45c5f894415a93eabe"
-  integrity sha512-gdqTQpGXcL46P4AK+oYyUibblalpq19tntP0KzbVaf/RTsp5TNL5ew8Lh9HHa9qXd4w3gWJ/fTf5eGJUYuMEig==
+"@meshsdk/provider@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/provider/-/provider-1.7.10.tgz#76628c8dbb408055e69930326d6e90b285e8bc96"
+  integrity sha512-ylPlGCn7NX2tU2BO/NQP+v47wJhMSMlcJTZcaJWoFsIOgHvRIzuRY2gB97BwxYos0JV40BO8p72xcg7qQ3cWCA==
   dependencies:
-    "@meshsdk/common" "*"
-    "@meshsdk/core-cst" "*"
+    "@meshsdk/common" "1.7.10"
+    "@meshsdk/core-cst" "1.7.10"
+    "@utxorpc/sdk" "0.6.2"
+    "@utxorpc/spec" "0.10.1"
     axios "^1.7.2"
 
-"@meshsdk/react@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/react/-/react-1.6.12.tgz#637be0a2895c5ccf5326bfe0b7ca3efe15fcc3c8"
-  integrity sha512-gxuiXGXs3mBGlc1YWsO5EdKRqO2Fk3IYGkAUxeCRKyftNvcD+lKo2l/Zp7Mkmel5YHJvMit0XyRC6OyqsqjGZQ==
+"@meshsdk/react@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/react/-/react-1.7.10.tgz#fa2f3fd8d39679503d9fdae26ce4deb96e3c7d25"
+  integrity sha512-KgRtpE6sEcsFJ30QiDBAgf9/CS4nsS6hs+yw7OZRR6ZQxzdki61OQxLHLIuvcUdCsrTRo5giMs+UyQZ1rMxVSQ==
   dependencies:
-    "@meshsdk/common" "*"
-    "@meshsdk/transaction" "*"
-    "@meshsdk/wallet" "*"
+    "@meshsdk/common" "1.7.10"
+    "@meshsdk/transaction" "1.7.10"
+    "@meshsdk/wallet" "1.7.10"
     react "^18.2.0"
 
-"@meshsdk/transaction@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/transaction/-/transaction-1.6.12.tgz#e4d9f7f05204284380c868f52a31957223001338"
-  integrity sha512-VrJz/jkpGw5WucjruawKuNl+r8am6liwP3GCX0tzQQxdazWcjj9ir/9r2hpQwJCpQ43Fd5CuWUIlGHt8AE9YFA==
+"@meshsdk/transaction@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/transaction/-/transaction-1.7.10.tgz#3a45d4e3f76dbc82f7498af3e5cd603cc213b904"
+  integrity sha512-DiDG7DpKacJcc0PD8qYrWEIqo2/WK9+mRVv0fML8FvxsP24ciy6nFpTkf4LJ622UXC8IW7N5CWgUvbrkNsEKuA==
   dependencies:
-    "@meshsdk/common" "*"
-    "@meshsdk/core-csl" "*"
-    "@meshsdk/core-cst" "*"
+    "@meshsdk/common" "1.7.10"
+    "@meshsdk/core-csl" "1.7.10"
+    "@meshsdk/core-cst" "1.7.10"
     json-bigint "^1.0.0"
 
-"@meshsdk/wallet@*":
-  version "1.6.12"
-  resolved "https://registry.yarnpkg.com/@meshsdk/wallet/-/wallet-1.6.12.tgz#e15ad15a3a80b6400c3e9e8d396f853e0fa30c3e"
-  integrity sha512-yo3NFYB9qQm0mzDUSGhPnZw/oU/Fu+DbiJN5LdPnDueCCUrw4C6fdluGBNg6BkQR4COPMv4MCj2H40uZxaA8ww==
+"@meshsdk/wallet@1.7.10":
+  version "1.7.10"
+  resolved "https://registry.yarnpkg.com/@meshsdk/wallet/-/wallet-1.7.10.tgz#b952bd3f737e182ab75ad5c9e1d6b5573aef3585"
+  integrity sha512-3DOL+7IoxhJ7nkr0aQ1VRrpd0SAXE+2hBdo0N+9gTDuab3vPSETsPImpIGQlAiOq+UsdNY3i14o8tPUkH96XKw==
   dependencies:
-    "@meshsdk/common" "*"
-    "@meshsdk/core-csl" "*"
-    "@meshsdk/core-cst" "*"
-    "@meshsdk/transaction" "*"
-    "@nufi/dapp-client-cardano" "^0.3.1"
-    "@nufi/dapp-client-core" "^0.3.1"
+    "@meshsdk/common" "1.7.10"
+    "@meshsdk/core-csl" "1.7.10"
+    "@meshsdk/core-cst" "1.7.10"
+    "@meshsdk/transaction" "1.7.10"
+    "@nufi/dapp-client-cardano" "0.3.5"
+    "@nufi/dapp-client-core" "0.3.5"
 
 "@noble/hashes@^1.2.0":
   version "1.4.0"
@@ -1159,14 +1215,14 @@
     read-package-json-fast "^3.0.0"
     which "^3.0.0"
 
-"@nufi/dapp-client-cardano@^0.3.1":
+"@nufi/dapp-client-cardano@0.3.5":
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/@nufi/dapp-client-cardano/-/dapp-client-cardano-0.3.5.tgz#7de2493a5a0f112feb698f2e0d38fef43c6f70fc"
   integrity sha512-1Auc7fsCZHRYaraniqCheeDS5eP1fmomps9N0KKEEgk2DFTKxdzJnkScHdep/p916EhzIW42niOcGR8sC4F5bQ==
   dependencies:
     "@nufi/dapp-client-core" "0.3.5"
 
-"@nufi/dapp-client-core@0.3.5", "@nufi/dapp-client-core@^0.3.1":
+"@nufi/dapp-client-core@0.3.5":
   version "0.3.5"
   resolved "https://registry.yarnpkg.com/@nufi/dapp-client-core/-/dapp-client-core-0.3.5.tgz#acd44c67ea0465df92e1c1f7f52c387b4e177c91"
   integrity sha512-gvX9u9v5xLUMDWITYPqDr/QTWFTDgTbprz2Wn1YQJs7WW2JLuaOGmDQn4ZWsv54VsGt/j/paRmGCbaqZYDJECQ==
@@ -1181,15 +1237,15 @@
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.7.tgz#fe973311a5c6267846aa131bc72e96c5d40d2b30"
   integrity sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g==
 
-"@sidan-lab/sidan-csl-rs-browser@0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@sidan-lab/sidan-csl-rs-browser/-/sidan-csl-rs-browser-0.7.5.tgz#270d435cbcfb71f7438eda7f494d9d14808c74ee"
-  integrity sha512-ME/n158D65IpnOOkQS5XCyoRc77FiHknYaMwrzosE3ziu5qXWJ7gkkQ3K1DdHFfLATwZfcKVUC/sUvTjFAmbnQ==
+"@sidan-lab/sidan-csl-rs-browser@0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@sidan-lab/sidan-csl-rs-browser/-/sidan-csl-rs-browser-0.9.4.tgz#e3626638b094dc510fd9f95a4c033bb92e13d28a"
+  integrity sha512-+WUeS0aTkh+j/kSjY/qFcXdJQUfhKvZAAxXrjv+i2/EaIphcv1XDGb05CoPUaX+4nUh2lLssFAnc4tEhei3w/w==
 
-"@sidan-lab/sidan-csl-rs-nodejs@0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@sidan-lab/sidan-csl-rs-nodejs/-/sidan-csl-rs-nodejs-0.7.5.tgz#a1e0a1bba60fb29acbfc554affc6e1383de27173"
-  integrity sha512-8IC7WsbrWrq/z/isvh/ceJljNuMOhPJSoRXuZO6GpKm0YLVShy6qWHzJ9JFsrTelWaAfElw4FsZjmZ6N9f5TGQ==
+"@sidan-lab/sidan-csl-rs-nodejs@0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@sidan-lab/sidan-csl-rs-nodejs/-/sidan-csl-rs-nodejs-0.9.4.tgz#892875eb133c82fa87bf9969b6a0916b351876ab"
+  integrity sha512-dmuEkPiDWcdlkOiE72HS3EkY8/XwMxR/ottgrcNcUw6fw09CSL5lynqklQEkTgwV060btvhjZ87ELfEda3w/pA==
 
 "@sigstore/bundle@^1.1.0":
   version "1.1.0"
@@ -1439,6 +1495,13 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.4.2.tgz#129cc9ae69f93824f92fac653eebfb4812ab4af9"
   integrity sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==
 
+"@types/node@20.14.10":
+  version "20.14.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.10.tgz#a1a218290f1b6428682e3af044785e5874db469a"
+  integrity sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==
+  dependencies:
+    undici-types "~5.26.4"
+
 "@types/node@^18.11.18":
   version "18.19.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.46.tgz#51801396c01153e0626e36f43386e83bc768b072"
@@ -1526,6 +1589,25 @@
   integrity sha512-6i0aC7jV6QzQB8ne1joVZ0eSFIstHsCrobmOtghM11yGlH0j43FKL2UhWdELkyps0zuf7qVTUVCCR+tgSlyLLw==
   dependencies:
     "@types/yargs-parser" "*"
+
+"@utxorpc/sdk@0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@utxorpc/sdk/-/sdk-0.6.2.tgz#3af3867d81c0bfb124d41f60daf4b82dc3e356ad"
+  integrity sha512-2duxfbH8B7DX3ync8U7BUYIi6lzerYwb8lMpW6Ax1fv3zqmJE39lGsBRVozJU1X3ITSB526ODkhgUo8DHRLvtQ==
+  dependencies:
+    "@connectrpc/connect" "1.4"
+    "@connectrpc/connect-node" "1.4"
+    "@connectrpc/connect-web" "1.4"
+    "@types/node" "20.14.10"
+    "@utxorpc/spec" "0.10.1"
+    buffer "^6.0.3"
+
+"@utxorpc/spec@0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@utxorpc/spec/-/spec-0.10.1.tgz#73c18e962b78cb78aef1df992aefd4bcc2d5b325"
+  integrity sha512-0INat5xSjkTeqKr+JO3SMQQ2PxcfZNUi5wJja/Fpnp68f52eTJf4X4QGy7tzqYzMsK/ZYhRr95J+WUeM6Vbmwg==
+  dependencies:
+    "@bufbuild/protobuf" "^1.10.0"
 
 "@zxing/text-encoding@0.9.0":
   version "0.9.0"
@@ -5462,7 +5544,16 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -5492,7 +5583,14 @@ string_decoder@~0.10.x:
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
   integrity sha512-ev2QzSzWPYmy9GuqfIVildA4OdcGLeFZQrq5ys6RtiuF+RQQiZWr8TZNyAcuVXyQRYfEO+MsoB/1BuQVhOJuoQ==
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -5778,6 +5876,13 @@ undici-types@~5.26.4:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
+undici@^5.28.3:
+  version "5.28.4"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.28.4.tgz#6b280408edb6a1a604a9b20340f45b422e373068"
+  integrity sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==
+  dependencies:
+    "@fastify/busboy" "^2.0.0"
+
 unique-filename@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/unique-filename/-/unique-filename-2.0.1.tgz#e785f8675a9a7589e0ac77e0b5c34d2eaeac6da2"
@@ -5950,7 +6055,16 @@ wide-align@^1.1.5:
   dependencies:
     string-width "^1.0.2 || 2 || 3 || 4"
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
