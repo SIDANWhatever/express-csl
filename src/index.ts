@@ -1,13 +1,13 @@
-import express, { Request, Response, NextFunction } from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import exampleTxRouter from './routes/exampleTx.route';
+import express, { Request, Response, NextFunction } from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import exampleTxRouter from "./routes/exampleTx.route";
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/exampleTx', exampleTxRouter);
+app.use("/exampleTx", exampleTxRouter);
 
 // Error handling middleware
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
@@ -17,7 +17,7 @@ app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
 });
 
 // Start the server
-const port = parseInt(process.env.PORT || '3000');
+const port = parseInt(process.env.PORT || "3000");
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
